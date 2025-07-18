@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+.bottom .price-block .price {
+  font-family: "IBM Plex Sans";
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.top .top-text h1, .bottom h2 {
+  font-family: "IBM Plex Sans";
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.bottom p, .bottom .price-block .per-month {
+  font-family: "IBM Plex Sans";
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+footer .email-style {
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.top .top-text p, footer p {
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.bottom .button-block .dark-button, .bottom .button-block .light-button {
+  font-family: "IBM Plex Sans";
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0;
+}
+
+.bottom .button-block .dark-button, .bottom .button-block .light-button {
+  width: 335px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.top {
+  height: 450px;
+  background-image: url("./assets/bg-main-mobile.png");
+  background-position: 0, 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 64px 20px;
+  margin-bottom: 200px;
+}
+.top .doodle-top {
+  display: none;
+}
+.top img {
+  padding-bottom: 64px;
+}
+.top .top-text {
+  width: 330px;
+  height: 230px;
+}
+.top .top-text h1 {
+  padding-bottom: 40px;
+}
+.middle {
+  background-color: #191826;
+  background-image: url("./assets/bg-pattern-1.svg");
+  background-size: cover;
+  height: 380px;
+}
+.middle img {
+  height: 430px;
+  position: relative;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom {
+  background-color: #fa7453;
+  height: 705px;
+  padding: 48px 20px;
+}
+.bottom h2 {
+  margin-bottom: 24px;
+}
+.bottom p {
+  margin-bottom: 40px;
+}
+.bottom .price-block {
+  display: flex;
+  align-items: center;
+}
+.bottom .price-block .price,
+.bottom .price-block .per-month {
+  display: inline-block;
+}
+.bottom .price-block .per-month {
+  margin-left: 16px;
+}
+.bottom .button-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 144px;
+  margin-top: 48px;
+}
+.bottom .button-block .dark-button {
+  background-color: #191826;
+  color: #fcfaf9;
+}
+.bottom .button-block .dark-button::before {
+  content: url("./assets/icon-apple.svg");
+  color: #fcfaf9;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+.bottom .button-block .light-button {
+  background-color: #fcfaf9;
+  color: #191826;
+}
+.bottom .button-block .light-button::before {
+  content: url("./assets/icon-android.svg");
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+
+footer {
+  height: 307px;
+  padding: 64px 20px 80px 20px;
+}
+footer .bottom-logo {
+  margin-bottom: 32px;
+}
+footer .social-media-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  width: 124px;
+}
+
+@media (min-width: 550px) {
+  .main {
+    position: relative;
+  }
+  .top {
+    background-image: url("./assets/bg-main-tablet.png");
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+  }
+  .top .doodle-top {
+    display: inline-block;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    height: 400px;
+  }
+}
+@media (min-width: 768px) {
+  * {
+    border: 1px solid tomato;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

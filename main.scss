@@ -1,0 +1,158 @@
+@use "typography";
+
+// Color Variables
+$cyan: #66e2dc;
+$orange: #fa7453;
+$yellow: #ffb964;
+$white: #fcfaf9;
+$slate: #191826;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.top {
+  height: 450px;
+  background-image: url("./assets/bg-main-mobile.png");
+  background-position: 0, 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 64px 20px;
+  margin-bottom: 200px;
+  .doodle-top {
+    display: none;
+  }
+  img {
+    padding-bottom: 64px;
+  }
+  .top-text {
+    width: 330px;
+    height: 230px;
+    h1 {
+      @extend %text-3;
+      padding-bottom: 40px;
+    }
+    p {
+      @extend %text-5-regular;
+    }
+  }
+}
+.middle {
+  img {
+    height: 430px;
+    position: relative;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  background-color: $slate;
+  background-image: url("./assets/bg-pattern-1.svg");
+  background-size: cover;
+  height: 380px;
+}
+
+.bottom {
+  background-color: $orange;
+  height: 705px;
+  padding: 48px 20px;
+  h2 {
+    @extend %text-3;
+    margin-bottom: 24px;
+  }
+  p {
+    margin-bottom: 40px;
+    @extend %text-4;
+  }
+  .price-block {
+    display: flex;
+    align-items: center;
+    .price,
+    .per-month {
+      display: inline-block;
+    }
+    .price {
+      @extend %text-2;
+    }
+    .per-month {
+      @extend %text-4;
+      margin-left: 16px;
+    }
+  }
+  .button-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 144px;
+    margin-top: 48px;
+    .dark-button {
+      @extend %text-6;
+      @extend %button;
+      background-color: $slate;
+      color: $white;
+    }
+    .dark-button::before {
+      content: url("./assets/icon-apple.svg");
+      color: $white;
+      margin-right: 10px;
+      position: relative;
+      top: 2px;
+    }
+    .light-button {
+      @extend %text-6;
+      @extend %button;
+      background-color: $white;
+      color: $slate;
+    }
+    .light-button::before {
+      content: url("./assets/icon-android.svg");
+      margin-right: 10px;
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+footer {
+  height: 307px;
+  padding: 64px 20px 80px 20px;
+  .bottom-logo {
+    margin-bottom: 32px;
+  }
+  p {
+    @extend %text-5-regular;
+  }
+  .email-style {
+    @extend %text-5-bold;
+  }
+  .social-media-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    width: 124px;
+  }
+}
+@media (min-width: 550px) {
+  .main {
+    position: relative;
+  }
+  .top {
+    background-image: url("./assets/bg-main-tablet.png");
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    .doodle-top {
+      display: inline-block;
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      height: 400px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  * {
+    border: 1px solid tomato;
+  }
+}
