@@ -15,14 +15,14 @@
   font-weight: bold;
 }
 
-.bottom p, .bottom .price-block .per-month {
+.bottom .price-block .per-month {
   font-family: "IBM Plex Sans";
   font-size: 20px;
   line-height: 150%;
   letter-spacing: 0;
 }
 
-footer .email-style {
+footer p .email-style {
   font-family: "IBM Plex Sans";
   font-size: 16px;
   line-height: 150%;
@@ -30,7 +30,7 @@ footer .email-style {
   font-weight: bold;
 }
 
-.top .top-text p, footer p {
+.top .top-text p, .bottom p, footer p {
   font-family: "IBM Plex Sans";
   font-size: 16px;
   line-height: 150%;
@@ -60,6 +60,10 @@ footer .email-style {
   margin: 0;
 }
 
+body {
+  width: 100vw;
+}
+
 .top {
   height: 450px;
   background-image: url("./assets/bg-main-mobile.png");
@@ -84,8 +88,8 @@ footer .email-style {
 }
 .middle {
   background-color: #191826;
-  background-image: url("./assets/bg-pattern-1.svg");
-  background-size: cover;
+  background-image: url("./assets/bg-pattern-2.svg");
+  background-repeat: no-repeat;
   height: 380px;
 }
 .middle img {
@@ -150,19 +154,33 @@ footer .email-style {
 
 footer {
   height: 307px;
-  padding: 64px 20px 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 footer .bottom-logo {
+  height: 32px;
   margin-bottom: 32px;
+}
+footer p {
+  width: 335px;
+  height: auto;
 }
 footer .social-media-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 32px;
   width: 124px;
 }
+footer .social-media-links img {
+  width: 20px;
+  height: 20px;
+}
 
-@media (min-width: 550px) {
+@media (min-width: 750px) {
   main {
     height: 1450px;
   }
@@ -189,7 +207,7 @@ footer .social-media-links {
     left: 30%;
     top: -90px;
     height: auto;
-    width: 50%;
+    width: 270px;
   }
   .bottom {
     position: relative;
@@ -204,10 +222,64 @@ footer .social-media-links {
   .bottom .button-block .light-button {
     width: 260px;
   }
+  footer {
+    margin-top: -50px;
+    margin-bottom: 50px;
+    height: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .bottom-logo {
+    padding-right: 100vw;
+  }
+  footer .social-media-links {
+    margin-right: 32px;
+    margin-top: 0;
+  }
 }
-@media (min-width: 768px) {
-  * {
-    border: 1px solid tomato;
+@media (min-width: 1068px) {
+  .top {
+    background-image: url("./assets/bg-main-desktop.png");
+    height: auto;
+  }
+  .top .top-text {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .top .top-text h1 {
+    font-size: 88px;
+    line-height: 100%;
+    letter-spacing: -1;
+  }
+  .middle {
+    background-position: center;
+  }
+  .middle img {
+    left: 30%;
+    top: -90px;
+    height: auto;
+    width: 269px;
+  }
+  .bottom {
+    width: 40%;
+    height: 40%;
+    top: -500px;
+    right: -50%;
+    margin-bottom: 0;
+  }
+  .bottom .button-block .dark-button,
+  .bottom .button-block .light-button {
+    width: 260px;
+  }
+  footer {
+    margin-top: 20px;
+  }
+  footer .bottom-logo {
+    padding: 0;
   }
 }
 

@@ -12,7 +12,9 @@ $slate: #191826;
   padding: 0;
   margin: 0;
 }
-
+body {
+  width: 100vw;
+}
 .top {
   height: 450px;
   background-image: url("./assets/bg-main-mobile.png");
@@ -48,8 +50,8 @@ $slate: #191826;
     transform: translateX(-50%);
   }
   background-color: $slate;
-  background-image: url("./assets/bg-pattern-1.svg");
-  background-size: cover;
+  background-image: url("./assets/bg-pattern-2.svg");
+  background-repeat: no-repeat;
   height: 380px;
 }
 
@@ -63,7 +65,7 @@ $slate: #191826;
   }
   p {
     margin-bottom: 40px;
-    @extend %text-4;
+    @extend %text-5-regular;
   }
   .price-block {
     display: flex;
@@ -116,24 +118,36 @@ $slate: #191826;
 }
 footer {
   height: 307px;
-  padding: 64px 20px 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-top: 50px;
   .bottom-logo {
+    height: 32px;
     margin-bottom: 32px;
   }
   p {
+    width: 335px;
+    height: auto;
     @extend %text-5-regular;
-  }
-  .email-style {
-    @extend %text-5-bold;
+    .email-style {
+      @extend %text-5-bold;
+    }
   }
   .social-media-links {
+    img {
+      width: 20px;
+      height: 20px;
+    }
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 32px;
     width: 124px;
   }
 }
-@media (min-width: 550px) {
+@media (min-width: 750px) {
   main {
     height: 1450px;
   }
@@ -159,7 +173,7 @@ footer {
       left: 30%;
       top: -90px;
       height: auto;
-      width: 50%;
+      width: 270px;
     }
   }
   .bottom {
@@ -177,9 +191,65 @@ footer {
       }
     }
   }
+  footer {
+    margin-top: -50px;
+    margin-bottom: 50px;
+    height: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .bottom-logo {
+      padding-right: 100vw;
+    }
+    justify-content: space-between;
+    align-items: center;
+    .social-media-links {
+      margin-right: 32px;
+      margin-top: 0;
+    }
+  }
 }
-@media (min-width: 768px) {
-  * {
-    border: 1px solid tomato;
+@media (min-width: 1068px) {
+  .top {
+    background-image: url("./assets/bg-main-desktop.png");
+    height: auto;
+    .top-text {
+      width: 70%;
+      height: auto;
+      margin: 0 auto;
+      h1 {
+        font-size: 88px;
+        line-height: 100%;
+        letter-spacing: -1;
+      }
+    }
+  }
+  .middle {
+    background-position: center;
+    img {
+      left: 30%;
+      top: -90px;
+      height: auto;
+      width: 269px;
+    }
+  }
+  .bottom {
+    width: 40%;
+    height: 40%;
+    top: -500px;
+    right: -50%;
+    margin-bottom: 0;
+    .button-block {
+      .dark-button,
+      .light-button {
+        width: 260px;
+      }
+    }
+  }
+  footer {
+    margin-top: 20px;
+    .bottom-logo {
+      padding: 0;
+    }
   }
 }
