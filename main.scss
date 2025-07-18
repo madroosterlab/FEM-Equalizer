@@ -94,25 +94,32 @@ body {
       @extend %button;
       background-color: $slate;
       color: $white;
+      svg {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+      }
     }
-    .dark-button::before {
-      content: url("./assets/icon-apple.svg");
-      color: $white;
-      margin-right: 10px;
-      position: relative;
-      top: 2px;
+    .dark-button:hover {
+      background-color: $cyan;
+      color: $slate;
+      svg {
+        fill: $slate;
+      }
     }
     .light-button {
       @extend %text-6;
       @extend %button;
       background-color: $white;
       color: $slate;
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
     }
-    .light-button::before {
-      content: url("./assets/icon-android.svg");
-      margin-right: 10px;
-      position: relative;
-      top: 3px;
+    .light-button:hover {
+      background-color: $yellow;
     }
   }
 }
@@ -137,9 +144,12 @@ footer {
     }
   }
   .social-media-links {
-    img {
+    svg {
       width: 20px;
       height: 20px;
+    }
+    svg:hover {
+      fill: $orange;
     }
     display: flex;
     justify-content: space-around;
@@ -177,6 +187,7 @@ footer {
     }
   }
   .bottom {
+    padding: 56px;
     position: relative;
     width: 50%;
     border-radius: 16px;
@@ -242,7 +253,7 @@ footer {
     .button-block {
       .dark-button,
       .light-button {
-        width: 260px;
+        width: 400px;
       }
     }
   }

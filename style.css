@@ -134,22 +134,29 @@ body {
   background-color: #191826;
   color: #fcfaf9;
 }
-.bottom .button-block .dark-button::before {
-  content: url("./assets/icon-apple.svg");
-  color: #fcfaf9;
+.bottom .button-block .dark-button svg {
+  height: 20px;
+  width: 20px;
   margin-right: 10px;
-  position: relative;
-  top: 2px;
+}
+.bottom .button-block .dark-button:hover {
+  background-color: #66e2dc;
+  color: #191826;
+}
+.bottom .button-block .dark-button:hover svg {
+  fill: #191826;
 }
 .bottom .button-block .light-button {
   background-color: #fcfaf9;
   color: #191826;
 }
-.bottom .button-block .light-button::before {
-  content: url("./assets/icon-android.svg");
+.bottom .button-block .light-button svg {
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
-  position: relative;
-  top: 3px;
+}
+.bottom .button-block .light-button:hover {
+  background-color: #ffb964;
 }
 
 footer {
@@ -175,9 +182,12 @@ footer .social-media-links {
   margin-top: 32px;
   width: 124px;
 }
-footer .social-media-links img {
+footer .social-media-links svg {
   width: 20px;
   height: 20px;
+}
+footer .social-media-links svg:hover {
+  fill: #fa7453;
 }
 
 @media (min-width: 750px) {
@@ -210,6 +220,7 @@ footer .social-media-links img {
     width: 270px;
   }
   .bottom {
+    padding: 56px;
     position: relative;
     width: 50%;
     border-radius: 16px;
@@ -273,7 +284,7 @@ footer .social-media-links img {
   }
   .bottom .button-block .dark-button,
   .bottom .button-block .light-button {
-    width: 260px;
+    width: 400px;
   }
   footer {
     margin-top: 20px;
