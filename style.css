@@ -163,8 +163,8 @@ footer .social-media-links {
 }
 
 @media (min-width: 550px) {
-  .main {
-    position: relative;
+  main {
+    height: 1450px;
   }
   .top {
     background-image: url("./assets/bg-main-tablet.png");
@@ -178,6 +178,31 @@ footer .social-media-links {
     top: -40px;
     right: -40px;
     height: 400px;
+  }
+  .middle {
+    width: 90%;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+  .middle img {
+    left: 30%;
+    top: -90px;
+    height: auto;
+    width: 50%;
+  }
+  .bottom {
+    position: relative;
+    width: 50%;
+    border-radius: 16px;
+    height: auto;
+    top: -550px;
+    right: -40%;
+    margin-bottom: 0;
+  }
+  .bottom .button-block .dark-button,
+  .bottom .button-block .light-button {
+    width: 260px;
   }
 }
 @media (min-width: 768px) {
